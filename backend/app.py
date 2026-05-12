@@ -16,27 +16,87 @@ class User(db.Model):
     password = db.Column(db.String(100))
 
 products = [
+
     {
         "id": 1,
         "name": "Laptop",
-        "price": 50000,
+        "price": 55000,
         "offer": "10% OFF",
-        "image": "https://via.placeholder.com/200"
+        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
     },
+
     {
         "id": 2,
-        "name": "Phone",
-        "price": 20000,
+        "name": "Smartphone",
+        "price": 25000,
         "offer": "15% OFF",
-        "image": "https://via.placeholder.com/200"
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
     },
+
     {
         "id": 3,
         "name": "Headphones",
         "price": 3000,
         "offer": "5% OFF",
-        "image": "https://via.placeholder.com/200"
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+    },
+
+    {
+        "id": 4,
+        "name": "Smart Watch",
+        "price": 7000,
+        "offer": "20% OFF",
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+    },
+
+    {
+        "id": 5,
+        "name": "Gaming Mouse",
+        "price": 1500,
+        "offer": "12% OFF",
+        "image": "https://images.unsplash.com/photo-1527814050087-3793815479db"
+    },
+
+    {
+        "id": 6,
+        "name": "Keyboard",
+        "price": 2500,
+        "offer": "18% OFF",
+        "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae"
+    },
+
+    {
+        "id": 7,
+        "name": "Camera",
+        "price": 45000,
+        "offer": "8% OFF",
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32"
+    },
+
+    {
+        "id": 8,
+        "name": "Bluetooth Speaker",
+        "price": 4000,
+        "offer": "25% OFF",
+        "image": "https://images.unsplash.com/photo-1589003077984-894e133dabab"
+    },
+
+    {
+        "id": 9,
+        "name": "Tablet",
+        "price": 18000,
+        "offer": "14% OFF",
+        "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0"
+    },
+
+    {
+        "id": 10,
+        "name": "Monitor",
+        "price": 12000,
+        "offer": "11% OFF",
+        "image": "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc"
     }
+
 ]
 
 @app.route('/signup', methods=['POST'])
