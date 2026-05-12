@@ -7,6 +7,8 @@ import Cart from './pages/Cart';
 import Payment from './pages/Payment';
 import ProductDetails from './pages/ProductDetails';
 import Wishlist from './pages/Wishlist';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

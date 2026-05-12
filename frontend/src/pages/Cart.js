@@ -75,7 +75,7 @@ function Cart() {
       id: 102,
       name: 'Wireless Earbuds',
       price: 3300,
-      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9',
+      image: 'https://m.media-amazon.com/images/I/61zW8yc4hTL.jpg'
     },
     {
       id: 103,

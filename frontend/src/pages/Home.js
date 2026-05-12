@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import ProductCard from '../components/ProductCard';
 import OfferBanner from '../components/OfferBanner';
 import api from '../api';
+// import BannerSlider from '../BannerSlider';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -64,6 +65,8 @@ function Home() {
   return (
     <div>
       <Navbar />
+     
+
 
       <OfferBanner />
 
