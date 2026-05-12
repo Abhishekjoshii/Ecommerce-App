@@ -35,6 +35,13 @@ function Cart() {
     saveCart(updated);
   };
 
+  const addToCart = (product) => {
+    const updated = [...cart];
+    updated.push({ ...product, quantity: 1 });
+    saveCart(updated);
+    alert('Product Added To Cart');
+  };
+
   const applyPromo = () => {
     const code = promoCode.trim().toUpperCase();
     if (code === 'SAVE10' && cart.length > 0) {
@@ -133,6 +140,9 @@ function Cart() {
                 <img src={product.image} alt={product.name} />
                 <h4>{product.name}</h4>
                 <p>₹ {product.price}</p>
+                <button onClick={() => addToCart(product)} className='add-to-cart-btn'>
+                  Add to Cart
+                </button>
               </div>
             ))}
           </div>
