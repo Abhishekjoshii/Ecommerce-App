@@ -44,9 +44,16 @@ function Cart() {
 
   const applyPromo = () => {
     const code = promoCode.trim().toUpperCase();
-    if (code === 'SAVE10' && cart.length > 0) {
+    if (code === 'GOSALE' && cart.length > 0) {
+      const discountAmount = Math.round((subtotal * 10) / 100);
+      setDiscount(discountAmount);
+      setMessage(`Promo applied: ₹${discountAmount} off (10%)`);
+    } else if (code === 'SAVE10' && cart.length > 0) {
       setDiscount(10);
       setMessage('Promo applied: ₹10 off');
+    } else if (cart.length === 0) {
+      setMessage('Add items to cart first');
+      setDiscount(0);
     } else {
       setDiscount(0);
       setMessage('Invalid coupon code');

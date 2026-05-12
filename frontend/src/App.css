@@ -102,7 +102,24 @@ body {
   font-weight: bold;
 }
 
-/* Products */
+.promo-banner {
+  background: #28a745;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.promo-banner p {
+  margin: 0;
+}
+
+.promo-banner strong {
+  font-weight: bold;
+}
+
+/* Home Top */
 
 .products {
   display: grid;
