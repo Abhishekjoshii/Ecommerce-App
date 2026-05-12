@@ -108,77 +108,77 @@ products = [
         "name": "Women's Denim Jacket",
         "price": 1899,
         "offer": "20% OFF",
-        "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5cc"
+        "image": "https://i5.walmartimages.com/seo/Viikei-Womens-Denim-Jackets-Plus-Size-Denim-Jackets-for-Women-Clearance-Classic-Casual-Solid-Color-Short-Long-sleeve-Denim-Blouse-Jacket-Coat_d23874c4-ab98-4048-8bcf-58b5e6fbcc57.4e887b239ef10bf433c849df7ffd9cbf.jpeg"
     },
     {
         "id": 13,
         "name": "Casual Blue Jeans",
         "price": 1299,
         "offer": "25% OFF",
-        "image": "https://images.unsplash.com/photo-1510414696678-2415ad8474aa"
+        "image": "https://cdn.cliqueinc.com/posts/310328/best-dark-wash-jeans-nordstrom-310328-1703118208742-main.750x0c.jpg?interlace=true&quality=70"
     },
     {
         "id": 14,
         "name": "Classic Hoodie",
         "price": 1499,
         "offer": "18% OFF",
-        "image": "https://images.unsplash.com/photo-1520975911811-59aa4a3a71c9"
+        "image": "https://dms.deckers.com/ugg/image/upload/f_auto,q_40,dpr_2/b_rgb:f4f2ee/w_483/v1734384882/1158751-DTB_1.png?_s=RAABAB0"
     },
     {
         "id": 15,
         "name": "Summer Floral Dress",
         "price": 1599,
         "offer": "22% OFF",
-        "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5cc"
+        "image": "https://www.stylesweekly.com/wp-content/uploads/2016/06/10-best-floral-dresses-for-beautiful-summer-1-800x1039.jpg"
     },
     {
         "id": 16,
         "name": "Black Leather Jacket",
         "price": 3499,
         "offer": "15% OFF",
-        "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+        "image": "https://tse3.mm.bing.net/th/id/OIP.je9ZbbgD2WxhjDLzr7gZSgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         "id": 17,
         "name": "Sports Running Shoes",
         "price": 2499,
         "offer": "20% OFF",
-        "image": "https://images.unsplash.com/photo-1528701800489-20fc7f23df4e"
+        "image": "https://i5.walmartimages.com/seo/Kricely-Men-s-Trail-Running-Shoes-Fashion-Walking-Hiking-Sneakers-Men-Tennis-Cross-Training-Shoe-Outdoor-Snearker-Mens-Casual-Workout-Footwear-Tie-dy_b4edf81c-4a0e-494f-ab8f-5310ea0dc80d.102205b429f8869dc851a8dc5c548ced.jpeg"
     },
     {
         "id": 18,
         "name": "White Sneakers",
         "price": 2199,
         "offer": "10% OFF",
-        "image": "https://images.unsplash.com/photo-1528701800489-20fc7f23df4e"
+        "image": "https://m.media-amazon.com/images/I/71z6GTSGhJL.jpg"
     },
     {
         "id": 19,
         "name": "Men's Formal Shirt",
         "price": 1399,
         "offer": "30% OFF",
-        "image": "https://images.unsplash.com/photo-1520975911811-59aa4a3a71c9"
+        "image": "https://i5.walmartimages.com/seo/qolati-Men-s-Formal-Dress-Shirt-Classic-Solid-Button-Front-Wrinkle-Free-Blouse-Regular-Fit-Stretch-Business-Formal-Shirts_497365fa-7956-4e07-bf4a-3f9948fddce7.cb5b5e5daf2276c988866b3cb9cb3bdd.jpeg"
     },
     {
         "id": 20,
         "name": "Cozy Knit Sweater",
         "price": 1699,
         "offer": "25% OFF",
-        "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5cc"
+        "image": "https://i.pinimg.com/originals/b8/50/39/b85039b41211003af5ea4264e6ccaa92.jpg"
     },
     {
         "id": 21,
         "name": "Denim Shorts",
         "price": 899,
         "offer": "20% OFF",
-        "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+        "image": "https://i.pinimg.com/originals/ba/e6/02/bae602337b7108b392f1762fbc7248d9.jpg"
     },
     {
         "id": 22,
         "name": "Women's Casual Shirt",
         "price": 1199,
         "offer": "18% OFF",
-        "image": "https://images.unsplash.com/photo-1520975911811-59aa4a3a71c9"
+        "image": "https://i5.walmartimages.com/seo/BILIKEYU-Women-s-Daily-Casual-Linen-Shirts-Shirts-for-Women-Button-Down-Shirts-for-Women-Casual-Shirts-for-Women_e6d7b9be-5075-4d47-b913-0da41d62656d.461467083ef1bea51e2719140d34b7e4.jpeg"
     }
 ]
 @app.route('/signup', methods=['POST'])

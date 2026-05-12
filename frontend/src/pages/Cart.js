@@ -55,7 +55,7 @@ function Cart() {
       id: 101,
       name: 'Portable Charger',
       price: 1200,
-      image: 'https://images.unsplash.com/photo-1510557880182-3d4d3b0dd222',
+      image: 'https://www.travelandleisure.com/thmb/eIzZNIMJ76dCqn8p2R_YH2JdRas=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Best-Portable-Chargers-of-2024-tout-bd0829ba3e8b404db7b89ea04d10ed9a.jpg',
     },
     {
       id: 102,
@@ -67,7 +67,7 @@ function Cart() {
       id: 103,
       name: 'Laptop Sleeve',
       price: 900,
-      image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796',
+      image: 'https://th.bing.com/th/id/OIP.KShbkVSRMqICWoJv1YFDIgHaHU?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3',
     },
   ];
 
