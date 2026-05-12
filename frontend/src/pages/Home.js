@@ -9,7 +9,7 @@ function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Laptops', 'Phones', 'Audio', 'Wearables', 'Accessories'];
+  const categories = ['All', 'Laptops', 'Phones', 'Audio', 'Wearables', 'Accessories', 'Clothing'];
 
   useEffect(() => {
     fetchProducts();
@@ -38,7 +38,16 @@ function Home() {
       (selectedCategory === 'Phones' && product.name.toLowerCase().includes('phone')) ||
       (selectedCategory === 'Audio' && (product.name.toLowerCase().includes('headphone') || product.name.toLowerCase().includes('speaker'))) ||
       (selectedCategory === 'Wearables' && product.name.toLowerCase().includes('watch')) ||
-      (selectedCategory === 'Accessories' && (product.name.toLowerCase().includes('mouse') || product.name.toLowerCase().includes('keyboard')));
+      (selectedCategory === 'Accessories' && (product.name.toLowerCase().includes('mouse') || product.name.toLowerCase().includes('keyboard'))) ||
+      (selectedCategory === 'Clothing' &&
+        (product.name.toLowerCase().includes('shirt') ||
+         product.name.toLowerCase().includes('jeans') ||
+         product.name.toLowerCase().includes('jacket') ||
+         product.name.toLowerCase().includes('dress') ||
+         product.name.toLowerCase().includes('hoodie') ||
+         product.name.toLowerCase().includes('sneakers') ||
+         product.name.toLowerCase().includes('shoes') ||
+         product.name.toLowerCase().includes('sweater')));
 
     return matchesSearch && matchesCategory;
   });
