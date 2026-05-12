@@ -8,16 +8,23 @@ function Home() {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [recentlyViewed, setRecentlyViewed] = useState([]);
 
   const categories = ['All', 'Laptops', 'Phones', 'Audio', 'Wearables', 'Accessories', 'Clothing'];
 
   useEffect(() => {
     fetchProducts();
+    loadRecentlyViewed();
   }, []);
 
   const fetchProducts = async () => {
     const response = await api.get('/products');
     setProducts(response.data);
+  };
+
+  const loadRecentlyViewed = () => {
+    const viewed = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
+    setRecentlyViewed(viewed.slice(0, 4));
   };
 
   const addToCart = (product) => {
@@ -99,6 +106,24 @@ function Home() {
           ))}
         </div>
       </section>
+
+      {recentlyViewed.length > 0 && products.length > 0 && (
+        <section className='recently-viewed-section'>
+          <h2>Recently Viewed</h2>
+          <div className='products'>
+            {recentlyViewed
+              .map((id) => products.find((p) => p.id === id))
+              .filter((p) => p)
+              .map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  addToCart={addToCart}
+                />
+              ))}
+          </div>
+        </section>
+      )}
 
       <section className='products-section'>
         <h2>All Products</h2>

@@ -18,6 +18,7 @@ function Navbar() {
       <div>
         <Link to='/home'>Home</Link>
         <Link to='/cart'>Cart</Link>
+        <Link to='/wishlist'>Wishlist</Link>
         <Link to='/payment'>Payment</Link>
         {user && location.pathname !== '/' && location.pathname !== '/signup' && (
           <button className='logout-button' onClick={handleLogout}>
