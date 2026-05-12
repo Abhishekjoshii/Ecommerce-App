@@ -6,6 +6,10 @@ import api from '../api';
 
 function Home() {
   const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const categories = ['All', 'Laptops', 'Phones', 'Audio', 'Wearables', 'Accessories'];
 
   useEffect(() => {
     fetchProducts();
@@ -19,12 +23,27 @@ function Home() {
   const addToCart = (product) => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    cart.push(product);
+    cart.push({ ...product, quantity: 1 });
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
     alert('Product Added To Cart');
   };
+
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === 'All' ||
+      (selectedCategory === 'Laptops' && product.name.toLowerCase().includes('laptop')) ||
+      (selectedCategory === 'Phones' && product.name.toLowerCase().includes('phone')) ||
+      (selectedCategory === 'Audio' && (product.name.toLowerCase().includes('headphone') || product.name.toLowerCase().includes('speaker'))) ||
+      (selectedCategory === 'Wearables' && product.name.toLowerCase().includes('watch')) ||
+      (selectedCategory === 'Accessories' && (product.name.toLowerCase().includes('mouse') || product.name.toLowerCase().includes('keyboard')));
+
+    return matchesSearch && matchesCategory;
+  });
+
+  const featuredProducts = products.slice(0, 4);
 
   return (
     <div>
@@ -32,15 +51,58 @@ function Home() {
 
       <OfferBanner />
 
-      <div className='products'>
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            addToCart={addToCart}
+      <div className='home-top'>
+        <div className='search-bar'>
+          <input
+            type='text'
+            placeholder='Search products...'
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
-        ))}
+        </div>
+
+        <div className='category-list'>
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={selectedCategory === category ? 'active-category' : ''}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
+
+      <section className='featured-section'>
+        <h2>Featured Picks</h2>
+        <div className='products'>
+          {featuredProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              addToCart={addToCart}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className='products-section'>
+        <h2>All Products</h2>
+        <div className='products'>
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                addToCart={addToCart}
+              />
+            ))
+          ) : (
+            <p className='empty-message'>No products match your search.</p>
+          )}
+        </div>
+      </section>
     </div>
   );
 }
