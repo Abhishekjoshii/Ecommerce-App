@@ -22,7 +22,7 @@ products = [
         "name": "Laptop",
         "price": 55000,
         "offer": "10% OFF",
-        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+        "image": "https://cdn.pixabay.com/photo/2014/05/02/21/50/laptop-336373_1280.jpg"
     },
 
     {
@@ -30,7 +30,7 @@ products = [
         "name": "Smartphone",
         "price": 25000,
         "offer": "15% OFF",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+        "image": "https://cdn.pixabay.com/photo/2016/11/29/09/08/mobile-phone-1869510_1280.jpg"
     },
 
     {
@@ -38,7 +38,7 @@ products = [
         "name": "Headphones",
         "price": 3000,
         "offer": "5% OFF",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+        "image": "https://cdn.pixabay.com/photo/2016/11/19/14/00/headphones-1837422_1280.jpg"
     },
 
     {
@@ -46,7 +46,7 @@ products = [
         "name": "Smart Watch",
         "price": 7000,
         "offer": "20% OFF",
-        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+        "image": "https://cdn.pixabay.com/photo/2017/08/06/22/01/apple-2592442_1280.jpg"
     },
 
     {
@@ -54,7 +54,7 @@ products = [
         "name": "Gaming Mouse",
         "price": 1500,
         "offer": "12% OFF",
-        "image": "https://images.unsplash.com/photo-1527814050087-3793815479db"
+        "image": "https://cdn.pixabay.com/photo/2014/12/27/15/40/mouse-581706_1280.jpg"
     },
 
     {
@@ -62,7 +62,7 @@ products = [
         "name": "Keyboard",
         "price": 2500,
         "offer": "18% OFF",
-        "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae"
+        "image": "https://cdn.pixabay.com/photo/2016/11/29/06/15/computer-1867758_1280.jpg"
     },
 
     {
@@ -70,7 +70,7 @@ products = [
         "name": "Camera",
         "price": 45000,
         "offer": "8% OFF",
-        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32"
+        "image": "https://cdn.pixabay.com/photo/2016/11/29/09/32/camera-1867184_1280.jpg"
     },
 
     {
@@ -78,7 +78,7 @@ products = [
         "name": "Bluetooth Speaker",
         "price": 4000,
         "offer": "25% OFF",
-        "image": "https://images.unsplash.com/photo-1589003077984-894e133dabab"
+        "image": "https://cdn.pixabay.com/photo/2016/11/29/05/08/audio-1867121_1280.jpg"
     },
 
     {
@@ -86,7 +86,7 @@ products = [
         "name": "Tablet",
         "price": 18000,
         "offer": "14% OFF",
-        "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0"
+        "image": "https://cdn.pixabay.com/photo/2014/09/27/13/44/tablet-463264_1280.jpg"
     },
 
     {
@@ -94,7 +94,7 @@ products = [
         "name": "Monitor",
         "price": 12000,
         "offer": "11% OFF",
-        "image": "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc"
+        "image": "https://cdn.pixabay.com/photo/2014/05/02/21/47/computer-336378_1280.jpg"
     }
 
 ]
