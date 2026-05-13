@@ -11,15 +11,18 @@ function Navbar() {
     navigate('/');
   };
 
+  const getLinkClass = (path) =>
+    location.pathname === path ? 'nav-link active' : 'nav-link';
+
   return (
     <div className='navbar'>
       <h2>ShopEasy</h2>
 
-      <div>
-        <Link to='/home'>Home</Link>
-        <Link to='/cart'>Cart</Link>
-        <Link to='/wishlist'>Wishlist</Link>
-        <Link to='/payment'>Payment</Link>
+      <div className='nav-actions'>
+        <Link className={getLinkClass('/home')} to='/home'>Home</Link>
+        <Link className={getLinkClass('/cart')} to='/cart'>Cart</Link>
+        <Link className={getLinkClass('/wishlist')} to='/wishlist'>Wishlist</Link>
+        <Link className={getLinkClass('/payment')} to='/payment'>Payment</Link>
         {user && location.pathname !== '/' && location.pathname !== '/signup' && (
           <button className='logout-button' onClick={handleLogout}>
             Logout

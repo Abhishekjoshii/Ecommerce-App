@@ -71,7 +71,7 @@ function Home() {
       <OfferBanner />
 
       <div className='promo-banner'>
-        <p>🎉 Apply promo code <strong>GOSALE</strong> to get <strong>10% discount</strong> on checkout!</p>
+        <p>🎉 Use promo code <strong>GOSALE</strong> for a <strong>10% discount</strong> today!</p>
       </div>
 
       <div className='home-top'>

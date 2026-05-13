@@ -1,7 +1,7 @@
 function OfferBanner() {
   return (
     <div className='offer-banner'>
-      <h2>Big Sale - Up To 50% OFF</h2>
+      <h2>Big Sale - Flat 10% OFF</h2>
     </div>
   );
 }
