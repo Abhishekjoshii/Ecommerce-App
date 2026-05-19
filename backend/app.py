@@ -1,11 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
-app = Flask(__name__)
+# =========================================
+# Flask Configuration
+# =========================================
+
+app = Flask(__name__, static_folder='static')
+
 CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -18,7 +24,7 @@ class User(db.Model):
 products = [
 
     {
-        "id": 1,
+        "id": 1,    
         "name": "Laptop",
         "price": 55000,
         "offer": "10% OFF",
@@ -183,35 +189,80 @@ products = [
 ]
 @app.route('/signup', methods=['POST'])
 def signup():
+
     data = request.json
 
     username = data['username']
+
     password = data['password']
 
     user = User(username=username, password=password)
+
     db.session.add(user)
+
     db.session.commit()
 
-    return jsonify({"message": "Signup Successful"})
+    return jsonify({
+        "message": "Signup Successful"
+    })
+
+
 @app.route('/login', methods=['POST'])
 def login():
+
     data = request.json
 
     username = data['username']
+
     password = data['password']
 
-    user = User.query.filter_by(username=username, password=password).first()
+    user = User.query.filter_by(
+        username=username,
+        password=password
+    ).first()
 
     if user:
-        return jsonify({"message": "Login Successful"})
+
+        return jsonify({
+            "message": "Login Successful"
+        })
+
     else:
-        return jsonify({"message": "Invalid Credentials"}), 401
+
+        return jsonify({
+            "message": "Invalid Credentials"
+        }), 401
+
 
 @app.route('/products', methods=['GET'])
 def get_products():
+
     return jsonify(products)
 
+# =========================================
+# React Frontend Route
+# =========================================
+
+@app.route('/')
+def home():
+
+    return send_from_directory(
+        app.static_folder,
+        'index.html'
+    )
+
+# =========================================
+# Run Application
+# =========================================
+
 if __name__ == '__main__':
+
     with app.app_context():
+
         db.create_all()
-    app.run(host="0.0.0.0", port=5000, debug=True)
+
+    app.run(
+        host='0.0.0.0',
+        port=5000,
+        debug=True
+    )
